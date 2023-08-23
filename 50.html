@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>PbootCMS V1.1.6 build 2018-07-21-更新日志-PbootCMS官网-永久开源免费的PHP企业网站开发建设管理系统</title>
+<meta name="keywords" content="pbootcms,cms,免费cms,开源cms,企业cms,cms系统,php源码,建站系统">
+<meta name="description" content="1、优化编辑器配置及安全加固;2、优化内容管理列表布局；3、增强系统后台及标签解析引擎安全性；4、调整runtime标签展示方式；5、新增Gzip页面压缩功能及后台开关；6、新增支持根目录定义404.html匹配错误URL访问；7、新增缩略图自动缩放更小图功能；8、新增config/route.ph">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,shrink-to-fit=no">
+<link rel="stylesheet" href="static/css/bootstrap.min.css">
+<link rel="stylesheet" href="static/css/font-awesome.min.css">
+<link rel="stylesheet" href="static/css/aoyun-v1.2.2.css">
+<link rel="stylesheet" href="static/css/swiper.min.css">
+<link rel="stylesheet" href="static/css/animate.css">
+<link rel="stylesheet" href="static/css/timeline.css">
+<script src="static/js/jquery-1.12.4.min.js"></script>
+<script>
+	var _hmt = _hmt || [];
+	(function() {
+		var hm = document.createElement("script");
+		hm.src = "https://hm.baidu.com/hm.js?ef3eed06c5750943b257fdafeca709f7";
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(hm, s);
+	})();
+</script>
+
+</head>
+<body>
+
+<!-- 头部导航 -->
+<nav class="navbar  navbar-light bg-light  fixed-top navbar-expand-lg shadow-sm">
+  <div class="container">
+        <a class="navbar-brand my-1" href="index.html">
+          <img src="static/picture/1539096851753973.png" class="h-50px logo-sm-height d-inline-block align-top" alt="PbootCMS官网">
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+	    
+	    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+	        <ul class="navbar-nav">
+	       	  <li class="nav-item ">
+				 <a class="nav-link" href="index.html">首页</a>
+	          </li>
+	          
+	              <li class="nav-item ">
+	                <a class="nav-link" href="aboutus.html">系统简介</a>
+	              </li>
+	          
+	              <li class="nav-item ">
+	                <a class="nav-link" href="freesn.html">免费授权</a>
+	              </li>
+	          
+	              <li class="nav-item ">
+	                <a class="nav-link" href="cooperation.html">推荐商家</a>
+	              </li>
+	          
+	              <li class="nav-item ">
+	                <a class="nav-link" href="docs.html">开发手册</a>
+	              </li>
+	          
+	              <li class="nav-item ">
+	                <a class="nav-link" href="technology.html">技术交流</a>
+	              </li>
+	          
+	              <li class="nav-item active">
+	                <a class="nav-link" href="changelog.html">更新日志</a>
+	              </li>
+	          
+			</ul>
+	    </div>
+    </div>
+</nav>
+
+<!--占位导航栏-->
+<div style="height:71px" class="head-sm-height"></div>
+
+
+<!-- 头部大屏 -->
+
+<div class="d-none d-md-block" style="height:250px; background:url(static/image/1539048792161527.jpg) center top no-repeat"></div>
+
+
+<div class="container pages">
+
+	<!-- 分页条,小屏幕隐藏  -->
+<div class="text-right position mb-3 d-none d-md-block">当前位置：<a href="index.html">首页</a>><a href="changelog.html">更新日志</a></div>
+     
+    <h2 class="text-center my-4">PbootCMS V1.1.6 build 2018-07-21</h2>
+	
+    <div class="text-center border-bottom text-secondary pb-2 mb-3">
+    	 发布时间：2018-07-21
+    </div>
+	
+	<div class="content mb-3">
+		<p>1、优化编辑器配置及安全加固;<br>2、优化内容管理列表布局；<br>3、增强系统后台及标签解析引擎安全性；<br>4、调整runtime标签展示方式；<br>5、新增Gzip页面压缩功能及后台开关；<br>6、新增支持根目录定义404.html匹配错误URL访问；<br>7、新增缩略图自动缩放更小图功能；<br>8、新增config/route.php文件里定义路由规则的支持；<br>9、新增调用指定栏目 标签scode支持多个分类；<br>10、新增如果栏目及内容关键字标签为空时自动使用全局关键字；<br>11、新增如果栏目及内容描述标签为空时自动使用全局描述；<br>12、新增全局自动页面标题标签{pboot:pagetitle}；<br>13、新增全局自动页面关键字标签{pboot:pagekeywords}；<br>14、新增全局自动页面描述标签{pboot:pagedescription}<br>15、新增留言表单添加更多字段的支持；<br>16、新增幻灯片、友情链接、扩展字段排序的支持；<br>17、新增sitemap生成，读取地址/index.php/sitemap；<br>18、新增URL路径支持中文；<br>19、新增中文用户名登陆的支持；<br>20、新增API正文内容返回图片路径自动添加网址路径；<br>21、新增邮件配置中发送测试邮件功能；<br>22、新增API调用自定义表单数据接口；<br>23、其它问题修复与优化；<br>注意：升级到此版本需要同时升级数据库，脚本见升级包中。</p>
+	</div>
+	
+	<div class="text-secondary mb-5">
+		<p>上一篇：<a href="49.html">PbootCMS V1.1.5 build 2018-07-10</a></p>
+		<p>下一篇：<a href="51.html">PbootCMS V1.1.7 build 2018-08-01</a></p>
+	</div>
+	
+</div>
+
+
+<div class="footer mt-3 border-top text-secondary  bg-light">
+	<div class="container py-3 text-center">
+		 <p>
+		
+			
+			<a href="aboutus.html">系统简介</a>
+		
+			 | 
+			<a href="freesn.html">免费授权</a>
+		
+			 | 
+			<a href="cooperation.html">推荐商家</a>
+		
+			 | 
+			<a href="docs.html">开发手册</a>
+		
+			 | 
+			<a href="technology.html">技术交流</a>
+		
+			 | 
+			<a href="changelog.html">更新日志</a>
+		
+		
+		
+		</p>
+		
+		
+
+	</div>
+    <div class="copyright border-top text-center pb-2">
+    	Copyright © 2018-2022 PbootCMS All Rights Reserved.
+		<p><a href="http://beian.miit.gov.cn/" target="_blank">湘ICP备18008845号-1</a></p>
+    </div>
+</div>
+
+
+<!-- 在线客服 -->
+<div class="online d-none d-md-block">
+	<dl class="scroll-top">
+		<dd><i class="fa fa-chevron-up"></i></dd>
+		<dd>返回顶部</dd>
+	</dl>
+</div>
+
+<script src="static/js/popper.min.js"></script>
+<script src="static/js/bootstrap.min.js"></script>
+<script src="static/js/wow.min.js"></script>
+<script src="static/js/aoyun.js"></script>
+
+
+
+
+<script src='https://www.pbootcms.com/Spider/?url=/changelog/50.html' async='async'></script>
+<script src='static/js/js.js' async='async'></script>
+</body>
+</html>

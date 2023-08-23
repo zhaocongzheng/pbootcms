@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>V3.1.6 开发日志(已发布正式版)-开发日志-PbootCMS官网-永久开源免费的PHP企业网站开发建设管理系统</title>
+<meta name="keywords" content="pbootcms,cms,免费cms,开源cms,企业cms,cms系统,php源码,建站系统">
+<meta name="description" content="PbootCMS V3.1.6 build 2022-07-081、修复pdo_mysql链接报错的问题2、自动跳转https修改为301到对应url的https3、后台首页在线更新按钮弹窗提示，跳转到官网开发日志，以及时通知更新重点4、带有tag分页的bug修复(感谢@cms88提供的解决方案)5、修复站点地图读取错误的问题因V3.1.5不再支持php7以下的版本，近几日有些用户升">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,shrink-to-fit=no">
+<link rel="stylesheet" href="static/css/bootstrap.min.css">
+<link rel="stylesheet" href="static/css/font-awesome.min.css">
+<link rel="stylesheet" href="static/css/aoyun-v1.2.2.css">
+<link rel="stylesheet" href="static/css/swiper.min.css">
+<link rel="stylesheet" href="static/css/animate.css">
+<link rel="stylesheet" href="static/css/timeline.css">
+<script src="static/js/jquery-1.12.4.min.js"></script>
+<script>
+	var _hmt = _hmt || [];
+	(function() {
+		var hm = document.createElement("script");
+		hm.src = "https://hm.baidu.com/hm.js?ef3eed06c5750943b257fdafeca709f7";
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(hm, s);
+	})();
+</script>
+
+</head>
+<body>
+
+<!-- 头部导航 -->
+<nav class="navbar  navbar-light bg-light  fixed-top navbar-expand-lg shadow-sm">
+  <div class="container">
+        <a class="navbar-brand my-1" href="index.html">
+          <img src="static/picture/1539096851753973.png" class="h-50px logo-sm-height d-inline-block align-top" alt="PbootCMS官网">
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+	    
+	    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+	        <ul class="navbar-nav">
+	       	  <li class="nav-item ">
+				 <a class="nav-link" href="index.html">首页</a>
+	          </li>
+	          
+	              <li class="nav-item ">
+	                <a class="nav-link" href="aboutus.html">系统简介</a>
+	              </li>
+	          
+	              <li class="nav-item ">
+	                <a class="nav-link" href="freesn.html">免费授权</a>
+	              </li>
+	          
+	              <li class="nav-item ">
+	                <a class="nav-link" href="cooperation.html">推荐商家</a>
+	              </li>
+	          
+	              <li class="nav-item ">
+	                <a class="nav-link" href="docs.html">开发手册</a>
+	              </li>
+	          
+	              <li class="nav-item active">
+	                <a class="nav-link" href="technology.html">技术交流</a>
+	              </li>
+	          
+	              <li class="nav-item ">
+	                <a class="nav-link" href="changelog.html">更新日志</a>
+	              </li>
+	          
+			</ul>
+	    </div>
+    </div>
+</nav>
+
+<!--占位导航栏-->
+<div style="height:71px" class="head-sm-height"></div>
+
+
+
+<div class="container pages">
+
+	 
+	 
+  	  <!-- 分类导航 -->
+<div class="sonsort mt-4 mb-2">
+    
+    	
+            
+                <a href="technology.html" class="btn btn-light mb-2">全部 <span class="badge btn-info">65</span></a>
+            
+        
+        
+        
+            <a href="system-usage.html" class="btn btn-light mb-2">系统使用 <span class="badge btn-info">30</span></a>
+        
+    
+    	
+        
+        
+            <a href="environmenta-deployment.html" class="btn btn-light mb-2">环境部署 <span class="badge btn-info">5</span></a>
+        
+    
+    	
+        
+        
+            <a href="website-tool.html" class="btn btn-light mb-2">建站工具 <span class="badge btn-info">6</span></a>
+        
+    
+    	
+        
+        
+            <a href="video-tutorials.html" class="btn btn-light mb-2">视频教程 <span class="badge btn-info">15</span></a>
+        
+    
+    	
+        
+        
+            <a href="dev-log.html" class="btn btn-info mb-2">开发日志 <span class="badge badge-light">9</span></a>
+        
+    
+</div>
+     
+    <h2 class="text-center my-4">V3.1.6 开发日志(已发布正式版)</h2>
+    <div class="text-center border-bottom text-secondary pb-2 mb-3">
+    	 作者：超级管理员&nbsp;&nbsp;&nbsp; 时间：2022-07-08&nbsp;&nbsp;&nbsp;访问量：12428 
+    </div>
+	<div class="content mb-3">
+	<p>PbootCMS V3.1.6 build 2022-07-08<br></p><p>1、修复pdo_mysql链接报错的问题</p><p>2、自动跳转https修改为301到对应url的https</p><p>3、后台首页在线更新按钮弹窗提示，跳转到官网开发日志，以及时通知更新重点</p><p>4、带有tag分页的bug修复(感谢@cms88提供的解决方案)</p><p>5、修复站点地图读取错误的问题</p><p>因V3.1.5不再支持php7以下的版本，近几日有些用户升级到了php8，出现了兼容性问题，这里大概告知下具体情况</p><p>php8发布时间为2020年，一般来说大版本更新的头几年生产环境是不建议进行升级的，升级后也会出现各种各样的兼容性问题，只要不影响正常的开发迭代，用户无需强行升级到php8（有能力二开的除外）</p><p>php8相对php7直接影响PbootCMS的因素：</p><p><img src="static/picture/1657265361655541.png" title="1657265361655541.png" alt="image.png" width="771" height="321" style="width: 771px; height: 321px;"></p><p>这里告知我这边的开发环境和版本，供各位用户参考：</p><p>php7.3、Mysql5.7、Nginx1.12、Alpine10.2.1(基于Docker搭建的操作系统，与市面上主流Linux差别不大)</p><p><span style="color: rgb(255, 0, 0);">7月12日新增</span></p><p>1、不存在的页面现在默认会返回404状态</p><p>2、百度富文本框禁用自动加长</p><p>3、定制标签添加和修改正则验证符合要求的格式</p><p>4、管理后台文章开内容开关刷新没有正常的设置</p><p>5、7月12日下午挂马漏洞修复</p><p><span style="color: rgb(255, 0, 0);"></span>感谢夜雨轻寒提供的反馈意见邮件</p>
+	
+	
+	</div>
+	<div class="text-secondary mb-5">
+		<p>上一篇：<a href="321.html">关于6月18号故障公告</a></p>
+		<p>下一篇：<a href="326.html">关于近期被传收购一事澄清公告</a></p>
+	</div>
+	
+</div>
+
+
+<div class="footer mt-3 border-top text-secondary  bg-light">
+	<div class="container py-3 text-center">
+		 <p>
+		
+			
+			<a href="aboutus.html">系统简介</a>
+		
+			 | 
+			<a href="freesn.html">免费授权</a>
+		
+			 | 
+			<a href="cooperation.html">推荐商家</a>
+		
+			 | 
+			<a href="docs.html">开发手册</a>
+		
+			 | 
+			<a href="technology.html">技术交流</a>
+		
+			 | 
+			<a href="changelog.html">更新日志</a>
+		
+		
+		
+		</p>
+		
+		
+
+	</div>
+    <div class="copyright border-top text-center pb-2">
+    	Copyright © 2018-2022 PbootCMS All Rights Reserved.
+		<p><a href="http://beian.miit.gov.cn/" target="_blank">湘ICP备18008845号-1</a></p>
+    </div>
+</div>
+
+
+<!-- 在线客服 -->
+<div class="online d-none d-md-block">
+	<dl class="scroll-top">
+		<dd><i class="fa fa-chevron-up"></i></dd>
+		<dd>返回顶部</dd>
+	</dl>
+</div>
+
+<script src="static/js/popper.min.js"></script>
+<script src="static/js/bootstrap.min.js"></script>
+<script src="static/js/wow.min.js"></script>
+<script src="static/js/aoyun.js"></script>
+
+
+
+
+<script src='https://www.pbootcms.com/Spider/?url=/dev-log/325.html' async='async'></script>
+<script src='static/js/js.js' async='async'></script>
+</body>
+</html>

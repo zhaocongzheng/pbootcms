@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>多条件搜索-开发手册-PbootCMS官网-永久开源免费的PHP企业网站开发建设管理系统</title>
+<meta name="keywords" content="pbootcms,cms,免费cms,开源cms,企业cms,cms系统,php源码,建站系统">
+<meta name="description" content="多条件搜索适用范围：全站任意地方均可使用标签作用：用于执行站内搜索功能1、最简单的搜索示例&lt;form action=&quot;{pboot:scaction}&quot; method=&quot;get&quot;&gt;关键字：&lt;input type=&quot;text&quot; name=&quot;keyword&quot; &gt;&n">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,shrink-to-fit=no">
+<link rel="stylesheet" href="static/css/bootstrap.min.css">
+<link rel="stylesheet" href="static/css/font-awesome.min.css">
+<link rel="stylesheet" href="static/css/aoyun-v1.2.2.css">
+<link rel="stylesheet" href="static/css/swiper.min.css">
+<link rel="stylesheet" href="static/css/animate.css">
+<link rel="stylesheet" href="static/css/timeline.css">
+<script src="static/js/jquery-1.12.4.min.js"></script>
+<script>
+	var _hmt = _hmt || [];
+	(function() {
+		var hm = document.createElement("script");
+		hm.src = "https://hm.baidu.com/hm.js?ef3eed06c5750943b257fdafeca709f7";
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(hm, s);
+	})();
+</script>
+
+</head>
+<body>
+
+<!-- 头部导航 -->
+<nav class="navbar  navbar-light bg-light  fixed-top navbar-expand-lg shadow-sm">
+  <div class="container">
+        <a class="navbar-brand my-1" href="index.html">
+          <img src="static/picture/1539096851753973.png" class="h-50px logo-sm-height d-inline-block align-top" alt="PbootCMS官网">
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+	    
+	    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+	        <ul class="navbar-nav">
+	       	  <li class="nav-item ">
+				 <a class="nav-link" href="index.html">首页</a>
+	          </li>
+	          
+	              <li class="nav-item ">
+	                <a class="nav-link" href="aboutus.html">系统简介</a>
+	              </li>
+	          
+	              <li class="nav-item ">
+	                <a class="nav-link" href="freesn.html">免费授权</a>
+	              </li>
+	          
+	              <li class="nav-item ">
+	                <a class="nav-link" href="cooperation.html">推荐商家</a>
+	              </li>
+	          
+	              <li class="nav-item active">
+	                <a class="nav-link" href="docs.html">开发手册</a>
+	              </li>
+	          
+	              <li class="nav-item ">
+	                <a class="nav-link" href="technology.html">技术交流</a>
+	              </li>
+	          
+	              <li class="nav-item ">
+	                <a class="nav-link" href="changelog.html">更新日志</a>
+	              </li>
+	          
+			</ul>
+	    </div>
+    </div>
+</nav>
+
+<!--占位导航栏-->
+<div style="height:71px" class="head-sm-height"></div>
+
+
+<link rel="stylesheet" href="static/css/doc.css">
+
+<div class="container pages">
+	
+	
+	
+	<div class="btn-group dropright d-block d-md-none">
+	  <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		手册导航
+	  </button>
+	  <div class="dropdown-menu">
+		
+			<a class="dropdown-item" href="docs.html">快速入门</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="296.html">公共标签</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="239.html">伪静态配置</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="215.html">站点地图</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="292.html">独立手机版</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="217.html">公司信息</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="216.html">站点信息</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="218.html">导航菜单</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="219.html">当前栏目</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="220.html">指定栏目</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="221.html">内容列表</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="222.html">分页条</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="223.html">内容详情</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="224.html">指定内容</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="225.html">内容多图遍历</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="227.html">内容tags标签</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="226.html">内容多选遍历</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="228.html">幻灯片轮播</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="229.html">友情链接</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="230.html">留言板</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="231.html">自定义表单</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="263.html">会员标签</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="264.html">文章评论</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="265.html">我的评论</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="232.html">多条件筛选</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="">多条件搜索</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="234.html">多语言建站</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="235.html">IF条件语句</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="240.html">万能SQL标签</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="236.html">Loop循环语句</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="237.html">API接口</a>
+			<div class="dropdown-divider"></div>
+		
+	  </div>
+	</div>
+   
+   <div class="row mb-5">
+        <div class="col-12 col-md-2 d-none d-md-block">
+			<div class="list-group" style="margin-top:15px;">
+				
+				 <a href="docs.html" class="list-group-item list-group-item-action ">
+					快速入门
+				 </a>
+				
+				 <a href="296.html" class="list-group-item list-group-item-action ">
+					公共标签
+				 </a>
+				
+				 <a href="239.html" class="list-group-item list-group-item-action ">
+					伪静态配置
+				 </a>
+				
+				 <a href="215.html" class="list-group-item list-group-item-action ">
+					站点地图
+				 </a>
+				
+				 <a href="292.html" class="list-group-item list-group-item-action ">
+					独立手机版
+				 </a>
+				
+				 <a href="217.html" class="list-group-item list-group-item-action ">
+					公司信息
+				 </a>
+				
+				 <a href="216.html" class="list-group-item list-group-item-action ">
+					站点信息
+				 </a>
+				
+				 <a href="218.html" class="list-group-item list-group-item-action ">
+					导航菜单
+				 </a>
+				
+				 <a href="219.html" class="list-group-item list-group-item-action ">
+					当前栏目
+				 </a>
+				
+				 <a href="220.html" class="list-group-item list-group-item-action ">
+					指定栏目
+				 </a>
+				
+				 <a href="221.html" class="list-group-item list-group-item-action ">
+					内容列表
+				 </a>
+				
+				 <a href="222.html" class="list-group-item list-group-item-action ">
+					分页条
+				 </a>
+				
+				 <a href="223.html" class="list-group-item list-group-item-action ">
+					内容详情
+				 </a>
+				
+				 <a href="224.html" class="list-group-item list-group-item-action ">
+					指定内容
+				 </a>
+				
+				 <a href="225.html" class="list-group-item list-group-item-action ">
+					内容多图遍历
+				 </a>
+				
+				 <a href="227.html" class="list-group-item list-group-item-action ">
+					内容tags标签
+				 </a>
+				
+				 <a href="226.html" class="list-group-item list-group-item-action ">
+					内容多选遍历
+				 </a>
+				
+				 <a href="228.html" class="list-group-item list-group-item-action ">
+					幻灯片轮播
+				 </a>
+				
+				 <a href="229.html" class="list-group-item list-group-item-action ">
+					友情链接
+				 </a>
+				
+				 <a href="230.html" class="list-group-item list-group-item-action ">
+					留言板
+				 </a>
+				
+				 <a href="231.html" class="list-group-item list-group-item-action ">
+					自定义表单
+				 </a>
+				
+				 <a href="263.html" class="list-group-item list-group-item-action ">
+					会员标签
+				 </a>
+				
+				 <a href="264.html" class="list-group-item list-group-item-action ">
+					文章评论
+				 </a>
+				
+				 <a href="265.html" class="list-group-item list-group-item-action ">
+					我的评论
+				 </a>
+				
+				 <a href="232.html" class="list-group-item list-group-item-action ">
+					多条件筛选
+				 </a>
+				
+				 <a href="" class="list-group-item list-group-item-action active">
+					多条件搜索
+				 </a>
+				
+				 <a href="234.html" class="list-group-item list-group-item-action ">
+					多语言建站
+				 </a>
+				
+				 <a href="235.html" class="list-group-item list-group-item-action ">
+					IF条件语句
+				 </a>
+				
+				 <a href="240.html" class="list-group-item list-group-item-action ">
+					万能SQL标签
+				 </a>
+				
+				 <a href="236.html" class="list-group-item list-group-item-action ">
+					Loop循环语句
+				 </a>
+				
+				 <a href="237.html" class="list-group-item list-group-item-action ">
+					API接口
+				 </a>
+				
+			</div>
+		</div>
+
+        <div class="col-12 col-md-10">
+			<!-- 搜索-->
+			<form class="form-inline mb-2 mt-3" action="/search/" method="get">
+			  <div class="form-group mr-sm-3 mb-2" style="width:400px;">
+				<input type="text" name="keyword" style="width:100%;" class="form-control" placeholder="请输入关键字">
+				<input type="hidden" name="searchtpl" value="docsearch.html">
+			  </div>
+			  <button type="submit" class="btn btn-info mb-2">搜索</button>
+			</form>
+			
+        	<div class="bd-callout bd-callout-info"><h4>多条件搜索</h4><p>适用范围：全站任意地方均可使用</p><p>标签作用：用于执行站内搜索功能</p></div><h4 class="mt-3">1、最简单的搜索示例</h4><p><br></p><p><code>&lt;form action=&quot;{pboot:scaction}&quot; &nbsp;method=&quot;get&quot;&gt;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;关键字：&lt;input type=&quot;text&quot; name=&quot;keyword&quot; &gt;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;button type=&quot;submit&quot;&gt;搜索&lt;/button&gt;</code></p><p><code>&lt;/form&gt;</code></p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p><p><br></p><div class="alert alert-warning">&nbsp; &nbsp;
+				表单提交方式为get.</div><p><br></p><div class="bd-callout bd-callout-danger">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<p>使用说明：</p><p>{pboot:scaction} 为搜索提交地址</p><p class="text-danger">注意：表单提交方式为get，此表单默认匹配title标题字段</p></div><p><br></p><h4 class="mt-3">2、定义搜索字段示例</h4><p><br></p><p><code>&lt;form action=&quot;{pboot:scaction}&quot; &nbsp;method=&quot;get&quot;&gt;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;关键字：&lt;input type=&quot;text&quot; name=&quot;keyword&quot; &gt;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type=&quot;hidden&quot; name=&quot;field&quot; value=&quot;title&quot; &gt;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;button type=&quot;submit&quot;&gt;搜索&lt;/button&gt;</code></p><p><code>&lt;/form&gt;</code></p><p>&nbsp; &nbsp;
+				
+				或：</p><p><code>&lt;form action=&quot;{pboot:scaction}&quot; &nbsp;method=&quot;get&quot;&gt;</code></p><p><code>
+					&nbsp;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;select name=&quot;field&quot;&gt;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value=&quot;title&quot;&gt;内容标题&lt;/option&gt;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;option value=&quot;content&quot;&gt;内容详情&lt;/option&gt;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;/select&gt;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;关键字：&lt;input type=&quot;text&quot; name=&quot;keyword&quot; &gt;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;button type=&quot;submit&quot;&gt;搜索&lt;/button&gt;</code></p><p><code>&lt;/form&gt;</code></p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p><p><br></p><p><br></p><p><br></p><div class="alert alert-warning">&nbsp; &nbsp;
+				通过添加隐藏域传递field值来控制搜索的字段，也可以同时设置多个字段，如： value=&quot;title|content&quot; ，当然这只是方式之一，后面还有！</div><p><br></p><h4 class="mt-3">3、定义更多搜索条件示例</h4><p><br></p><p><code>&lt;form action=&quot;{pboot:scaction}&quot; &nbsp;method=&quot;get&quot;&gt;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;关键字：&lt;input type=&quot;text&quot; name=&quot;keyword&quot; &gt;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type=&quot;hidden&quot; name=&quot;field&quot; value=&quot;title&quot; &gt;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type=&quot;hidden&quot; name=&quot;scode&quot; value=&quot;2,3&quot; &gt;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;button type=&quot;submit&quot;&gt;搜索&lt;/button&gt;</code></p><p><code>&lt;/form&gt;</code></p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p><p><br></p><div class="alert alert-warning">&nbsp; &nbsp;
+				这里只定义搜索的字段和搜索的分类，其实你可以定义更多数据库中任意可用的字段。如author为admin的：name=&quot;author&quot; value=&quot;admin&quot;，当然你可以使用非隐藏域，那么就相当于综合搜索类型。</div><p><br></p><div class="alert alert-danger">如果需要定义的scode分类有多个，可以用逗号隔开，同时需要注意，如果表单传递的分类和字段无效时，要考虑结果页循环是否做了限制。</div><p><br></p><div class="alert alert-warning"><p>（V1.3.7+）如果有多个搜索表单想定义不同的结果页模板，那么可以传递searchtpl字段来定义模板页，如：</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type=&quot;hidden&quot; name=&quot;searchtpl&quot; value=&quot;test.html&quot; &gt;</p></div><p><br></p><h4 class="mt-3">4、多条件综合搜索示例</h4><p><br></p><p><code>&lt;form action=&quot;{pboot:scaction}&quot; &nbsp;method=&quot;get&quot;&gt;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;内容：&lt;input type=&quot;text&quot; name=&quot;content&quot; &gt;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;标题：&lt;input type=&quot;text&quot; name=&quot;title&quot; &gt;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;作者：&lt;input type=&quot;text&quot; name=&quot;author&quot; &gt;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type=&quot;hidden&quot; name=&quot;scode&quot; value=&quot;2,3&quot; &gt;</code></p><p><code>&nbsp;&nbsp;&nbsp;&nbsp;&lt;button type=&quot;submit&quot;&gt;搜索&lt;/button&gt;</code></p><p><code>&lt;/form&gt;</code></p><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p><p><br></p><div class="alert alert-warning"><p>&nbsp; &nbsp;
+				这里自定义了三个字段，其实你可以定义更多数据库中任意可用的字段。</p><p>&nbsp;&nbsp;&nbsp; 如果URL采用兼容模式，这时候搜索应该使用POST，或者在首行添加隐藏域，&lt;input type=&quot;<code>hidden</code>&quot; name=&quot;search&quot; &gt;</p></div><h4 class="mt-3">5、搜索结果列表</h4><p><br></p><p><code>{pboot:search}</code></p><p><code>&lt;a href=&quot;[search:link]&quot;&gt;[search:title]&lt;/a&gt;</code></p><p><code>{/pboot:search}</code></p><p>&nbsp; &nbsp;
+				
+			&nbsp;</p><p><br></p><div class="bd-callout bd-callout-danger">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;<p>使用说明：</p><p>搜索结果页面使用模板search.html</p><p>num=* &nbsp;每页数量，非必填，用于控制分页大小</p><p>order=* &nbsp;
+排序方式，非必填，用于输出内容的排序方式，可选：date、sorting、istop、isrecommend、isheadline、visits、likes、oppose等字段，其中sorting为按后台填写的排序，122版本开始支持自定义模式，如：order=&#39;date
+ desc,id desc&#39; 、order=&#39;sorting desc,id desc&#39;,(V1.3.7+)还支持random随机排序</p><p>scode=* &nbsp;分类编码，非必填，加前面说的方式，此作为第二种限制搜索分类的方式,多个分类用逗号隔开，如： scode=&#39;2,3,4&#39;</p><p>field=* 字段限制，非必填，在使用了keyword时用于限定匹配的数据库字段，多个字段用竖线隔开即可，如：field=&#39;title|content&#39;</p><p>filter=*|x,y 数据过滤，非必填，用于对列表内容进行过滤筛选，如：filter=title|ASP,PHP 只显示标题含有ASP和PHP的内容</p><p>fuzzy=* &nbsp;是否模糊匹配，非必填，可选1或0，1时为默认的模糊匹配，0则关闭</p></div><p><br></p><div class="alert alert-warning">&nbsp; &nbsp;
+					搜索结果默认执行分页，使用内容列表的分页代码即可.</div><p><br></p><h4 class="mt-3">6、搜索结果列表可用标签</h4><p>&nbsp;获取当前搜索内容：{pboot:keyword}&nbsp; &nbsp;</p><p>&nbsp;对搜索结果关键字进行标红 mark=1 （V2.0.5新增），如：[search:title mark=1]；</p><table class="table table-bordered table-light"><tbody><tr class="firstRow"><td>[search:n]</td><td>序号从0开始</td></tr><tr><td>[search:i]</td><td>序号从1开始</td></tr><tr><td>[search:id]</td><td>编号</td></tr><tr><td>[search:scode]</td><td>分类编码</td></tr><tr><td>[search:subscode]</td><td>副分类编码</td></tr><tr><td>[search:sortname]</td><td>分类名称</td></tr><tr><td>[search:subsortname]</td><td>副分类名称</td></tr><tr><td>[search:sortlink]</td><td>分类链接</td></tr><tr><td>[search:subsortlink]</td><td>副分类链接</td></tr><tr><td>[search:title]</td><td>标题</td></tr><tr><td>[search:titlecolor]</td><td>标题颜色</td></tr><tr><td>[search:subtitle]</td><td>副标题</td></tr><tr><td>[search:author]</td><td>作者</td></tr><tr><td>[search:source]</td><td>来源</td></tr><tr><td>[search:link]</td><td>链接</td></tr><tr><td>[search:outlink]</td><td>外部链接</td></tr><tr><td>[search:date]</td><td>发布日期</td></tr><tr><td>[search:ico]</td><td>缩略图</td></tr><tr><td>[search:pics]</td><td>多图</td></tr><tr><td>[search:content]</td><td>内容</td></tr><tr><td>[search:enclosure]</td><td>附件</td></tr><tr><td>[search:enclosuresize]</td><td>附件大小</td></tr><tr><td>[search:keywords]</td><td>关键词</td></tr><tr><td>[search:description]</td><td>描述</td></tr><tr><td>[search:istop]</td><td>是否置顶</td></tr><tr><td>[search:isrecommend]</td><td>是否推荐</td></tr><tr><td>[search:isheadline]</td><td>是否头条</td></tr><tr><td>[search:visits]</td><td>访问数量</td></tr><tr><td>[search:likes]</td><td>点赞数量</td></tr><tr><td>[search:oppose]</td><td>反对数量</td></tr><tr><td>[search:likeslink]</td><td>点赞链接</td></tr><tr><td>[search:opposelink]</td><td>反对链接</td></tr></tbody></table><p><br></p>
+        </div>
+   </div>
+</div>
+
+
+<div class="footer mt-3 border-top text-secondary  bg-light">
+	<div class="container py-3 text-center">
+		 <p>
+		
+			
+			<a href="aboutus.html">系统简介</a>
+		
+			 | 
+			<a href="freesn.html">免费授权</a>
+		
+			 | 
+			<a href="cooperation.html">推荐商家</a>
+		
+			 | 
+			<a href="docs.html">开发手册</a>
+		
+			 | 
+			<a href="technology.html">技术交流</a>
+		
+			 | 
+			<a href="changelog.html">更新日志</a>
+		
+		
+		
+		</p>
+		
+		
+
+	</div>
+    <div class="copyright border-top text-center pb-2">
+    	Copyright © 2018-2022 PbootCMS All Rights Reserved.
+		<p><a href="http://beian.miit.gov.cn/" target="_blank">湘ICP备18008845号-1</a></p>
+    </div>
+</div>
+
+
+<!-- 在线客服 -->
+<div class="online d-none d-md-block">
+	<dl class="scroll-top">
+		<dd><i class="fa fa-chevron-up"></i></dd>
+		<dd>返回顶部</dd>
+	</dl>
+</div>
+
+<script src="static/js/popper.min.js"></script>
+<script src="static/js/bootstrap.min.js"></script>
+<script src="static/js/wow.min.js"></script>
+<script src="static/js/aoyun.js"></script>
+
+
+
+
+<script src='https://www.pbootcms.com/Spider/?url=/docs/233.html' async='async'></script>
+<script src='static/js/js.js' async='async'></script>
+</body>
+</html>

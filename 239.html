@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>伪静态配置-开发手册-PbootCMS官网-永久开源免费的PHP企业网站开发建设管理系统</title>
+<meta name="keywords" content="pbootcms,cms,免费cms,开源cms,企业cms,cms系统,php源码,建站系统">
+<meta name="description" content="伪静态配置标签作用：配置程序伪静态后URL中将不再包含index.php，整个地址更美观1、IIS环境（IIS6的环境自行百度）：1）安装rewrite组件，如果使用空间一般空间商默认已经安装；2）到后台配置参数中开启伪静态开关；3）在站点目录建立web">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,shrink-to-fit=no">
+<link rel="stylesheet" href="static/css/bootstrap.min.css">
+<link rel="stylesheet" href="static/css/font-awesome.min.css">
+<link rel="stylesheet" href="static/css/aoyun-v1.2.2.css">
+<link rel="stylesheet" href="static/css/swiper.min.css">
+<link rel="stylesheet" href="static/css/animate.css">
+<link rel="stylesheet" href="static/css/timeline.css">
+<script src="static/js/jquery-1.12.4.min.js"></script>
+<script>
+	var _hmt = _hmt || [];
+	(function() {
+		var hm = document.createElement("script");
+		hm.src = "https://hm.baidu.com/hm.js?ef3eed06c5750943b257fdafeca709f7";
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(hm, s);
+	})();
+</script>
+
+</head>
+<body>
+
+<!-- 头部导航 -->
+<nav class="navbar  navbar-light bg-light  fixed-top navbar-expand-lg shadow-sm">
+  <div class="container">
+        <a class="navbar-brand my-1" href="index.html">
+          <img src="static/picture/1539096851753973.png" class="h-50px logo-sm-height d-inline-block align-top" alt="PbootCMS官网">
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+	    
+	    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+	        <ul class="navbar-nav">
+	       	  <li class="nav-item ">
+				 <a class="nav-link" href="index.html">首页</a>
+	          </li>
+	          
+	              <li class="nav-item ">
+	                <a class="nav-link" href="aboutus.html">系统简介</a>
+	              </li>
+	          
+	              <li class="nav-item ">
+	                <a class="nav-link" href="freesn.html">免费授权</a>
+	              </li>
+	          
+	              <li class="nav-item ">
+	                <a class="nav-link" href="cooperation.html">推荐商家</a>
+	              </li>
+	          
+	              <li class="nav-item active">
+	                <a class="nav-link" href="docs.html">开发手册</a>
+	              </li>
+	          
+	              <li class="nav-item ">
+	                <a class="nav-link" href="technology.html">技术交流</a>
+	              </li>
+	          
+	              <li class="nav-item ">
+	                <a class="nav-link" href="changelog.html">更新日志</a>
+	              </li>
+	          
+			</ul>
+	    </div>
+    </div>
+</nav>
+
+<!--占位导航栏-->
+<div style="height:71px" class="head-sm-height"></div>
+
+
+<link rel="stylesheet" href="static/css/doc.css">
+
+<div class="container pages">
+	
+	
+	
+	<div class="btn-group dropright d-block d-md-none">
+	  <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		手册导航
+	  </button>
+	  <div class="dropdown-menu">
+		
+			<a class="dropdown-item" href="docs.html">快速入门</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="296.html">公共标签</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="">伪静态配置</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="215.html">站点地图</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="292.html">独立手机版</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="217.html">公司信息</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="216.html">站点信息</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="218.html">导航菜单</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="219.html">当前栏目</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="220.html">指定栏目</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="221.html">内容列表</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="222.html">分页条</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="223.html">内容详情</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="224.html">指定内容</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="225.html">内容多图遍历</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="227.html">内容tags标签</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="226.html">内容多选遍历</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="228.html">幻灯片轮播</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="229.html">友情链接</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="230.html">留言板</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="231.html">自定义表单</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="263.html">会员标签</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="264.html">文章评论</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="265.html">我的评论</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="232.html">多条件筛选</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="233.html">多条件搜索</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="234.html">多语言建站</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="235.html">IF条件语句</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="240.html">万能SQL标签</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="236.html">Loop循环语句</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="237.html">API接口</a>
+			<div class="dropdown-divider"></div>
+		
+	  </div>
+	</div>
+   
+   <div class="row mb-5">
+        <div class="col-12 col-md-2 d-none d-md-block">
+			<div class="list-group" style="margin-top:15px;">
+				
+				 <a href="docs.html" class="list-group-item list-group-item-action ">
+					快速入门
+				 </a>
+				
+				 <a href="296.html" class="list-group-item list-group-item-action ">
+					公共标签
+				 </a>
+				
+				 <a href="" class="list-group-item list-group-item-action active">
+					伪静态配置
+				 </a>
+				
+				 <a href="215.html" class="list-group-item list-group-item-action ">
+					站点地图
+				 </a>
+				
+				 <a href="292.html" class="list-group-item list-group-item-action ">
+					独立手机版
+				 </a>
+				
+				 <a href="217.html" class="list-group-item list-group-item-action ">
+					公司信息
+				 </a>
+				
+				 <a href="216.html" class="list-group-item list-group-item-action ">
+					站点信息
+				 </a>
+				
+				 <a href="218.html" class="list-group-item list-group-item-action ">
+					导航菜单
+				 </a>
+				
+				 <a href="219.html" class="list-group-item list-group-item-action ">
+					当前栏目
+				 </a>
+				
+				 <a href="220.html" class="list-group-item list-group-item-action ">
+					指定栏目
+				 </a>
+				
+				 <a href="221.html" class="list-group-item list-group-item-action ">
+					内容列表
+				 </a>
+				
+				 <a href="222.html" class="list-group-item list-group-item-action ">
+					分页条
+				 </a>
+				
+				 <a href="223.html" class="list-group-item list-group-item-action ">
+					内容详情
+				 </a>
+				
+				 <a href="224.html" class="list-group-item list-group-item-action ">
+					指定内容
+				 </a>
+				
+				 <a href="225.html" class="list-group-item list-group-item-action ">
+					内容多图遍历
+				 </a>
+				
+				 <a href="227.html" class="list-group-item list-group-item-action ">
+					内容tags标签
+				 </a>
+				
+				 <a href="226.html" class="list-group-item list-group-item-action ">
+					内容多选遍历
+				 </a>
+				
+				 <a href="228.html" class="list-group-item list-group-item-action ">
+					幻灯片轮播
+				 </a>
+				
+				 <a href="229.html" class="list-group-item list-group-item-action ">
+					友情链接
+				 </a>
+				
+				 <a href="230.html" class="list-group-item list-group-item-action ">
+					留言板
+				 </a>
+				
+				 <a href="231.html" class="list-group-item list-group-item-action ">
+					自定义表单
+				 </a>
+				
+				 <a href="263.html" class="list-group-item list-group-item-action ">
+					会员标签
+				 </a>
+				
+				 <a href="264.html" class="list-group-item list-group-item-action ">
+					文章评论
+				 </a>
+				
+				 <a href="265.html" class="list-group-item list-group-item-action ">
+					我的评论
+				 </a>
+				
+				 <a href="232.html" class="list-group-item list-group-item-action ">
+					多条件筛选
+				 </a>
+				
+				 <a href="233.html" class="list-group-item list-group-item-action ">
+					多条件搜索
+				 </a>
+				
+				 <a href="234.html" class="list-group-item list-group-item-action ">
+					多语言建站
+				 </a>
+				
+				 <a href="235.html" class="list-group-item list-group-item-action ">
+					IF条件语句
+				 </a>
+				
+				 <a href="240.html" class="list-group-item list-group-item-action ">
+					万能SQL标签
+				 </a>
+				
+				 <a href="236.html" class="list-group-item list-group-item-action ">
+					Loop循环语句
+				 </a>
+				
+				 <a href="237.html" class="list-group-item list-group-item-action ">
+					API接口
+				 </a>
+				
+			</div>
+		</div>
+
+        <div class="col-12 col-md-10">
+			<!-- 搜索-->
+			<form class="form-inline mb-2 mt-3" action="/search/" method="get">
+			  <div class="form-group mr-sm-3 mb-2" style="width:400px;">
+				<input type="text" name="keyword" style="width:100%;" class="form-control" placeholder="请输入关键字">
+				<input type="hidden" name="searchtpl" value="docsearch.html">
+			  </div>
+			  <button type="submit" class="btn btn-info mb-2">搜索</button>
+			</form>
+			
+        	<div class="tab-pane fade active show"><div class="bd-callout bd-callout-info"><h4>伪静态配置</h4><p>标签作用：配置程序伪静态后URL中将不再包含兼容模式的问号，整个地址更美观，也便于推广优化。</p><p>适用版本：2.X 、3.X</p></div><h4 class="mt-3">1、IIS7+环境（IIS6的环境自行百度）：</h4><p>1）安装rewrite组件，如果使用空间一般空间商默认已经安装；</p><p>2）到后台配置参数中开启伪静态开关；</p><p>3）在站点目录建立web.config文件（可到源码包rewrite目录下拷贝规则），规则内容如下：</p><pre>&lt;?xml&nbsp;version=&quot;1.0&quot;&nbsp;encoding=&quot;UTF-8&quot;?&gt;
+&lt;configuration&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;system.webServer&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;rewrite&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;rules&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;rule&nbsp;name=&quot;reIndex&quot;&nbsp;stopProcessing=&quot;true&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;match&nbsp;url=&quot;^(.*)$&quot;&nbsp;ignoreCase=&quot;true&quot;&nbsp;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;conditions&nbsp;logicalGrouping=&quot;MatchAll&quot;&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;add&nbsp;input=&quot;{REQUEST_FILENAME}&quot;&nbsp;matchType=&quot;IsDirectory&quot;&nbsp;negate=&quot;true&quot;&nbsp;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;add&nbsp;input=&quot;{REQUEST_FILENAME}&quot;&nbsp;matchType=&quot;IsFile&quot;&nbsp;negate=&quot;true&quot;&nbsp;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/conditions&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;action&nbsp;type=&quot;Rewrite&quot;&nbsp;url=&quot;index.php?p={R:1}&quot;&nbsp;appendQueryString=&quot;true&quot;&nbsp;/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/rule&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/rules&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/rewrite&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/system.webServer&gt;
+&lt;/configuration&gt;</pre><h4 class="mt-3">2、Apache环境</h4><p>1）开启Apache重写模块，具体请百度，如果使用空间一般空间商默认已经开启；</p><p>2）到后台配置参数中开启伪静态开关；</p><p>3）在站点目录建立.htaccess文件（可到源码包rewrite目录下拷贝规则），规则内容如下：</p><pre>&lt;IfModule&nbsp;mod_rewrite.c&gt;
+&nbsp;&nbsp;Options&nbsp;+FollowSymlinks
+&nbsp;&nbsp;RewriteEngine&nbsp;On
+&nbsp;&nbsp;
+&nbsp;&nbsp;RewriteCond&nbsp;%{REQUEST_FILENAME}&nbsp;!-d
+&nbsp;&nbsp;RewriteCond&nbsp;%{REQUEST_FILENAME}&nbsp;!-f
+&nbsp;&nbsp;
+&nbsp;&nbsp;RewriteRule&nbsp;^(.*)$&nbsp;index.php?p=$1&nbsp;[QSA,PT,L]
+&lt;/IfModule&gt;</pre><h4 class="mt-3">3、Nginx环境</h4><p>1、到后台配置参数中开启伪静态；</p><p>2、在nginx虚拟主机location配置中添加规则，规则如下：</p><pre>location&nbsp;/&nbsp;{
+	&nbsp;if&nbsp;(!-e&nbsp;$request_filename){
+	&nbsp;&nbsp;&nbsp;&nbsp;	rewrite&nbsp;^/index.php(.*)$&nbsp;/index.php?p=$1&nbsp;last;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	rewrite&nbsp;^(.*)$&nbsp;/index.php?s=$1&nbsp;last;
+	&nbsp;}
+}</pre><div class="alert alert-warning"><p>&nbsp;注意：Nginx中如果站点部署在二级目录，请对应修改重写规则， 如：二级目录为test则：rewrite ^/test/(.*)$ /test/index.php?p=$1 last;</p></div></div><p><br></p>
+        </div>
+   </div>
+</div>
+
+
+<div class="footer mt-3 border-top text-secondary  bg-light">
+	<div class="container py-3 text-center">
+		 <p>
+		
+			
+			<a href="aboutus.html">系统简介</a>
+		
+			 | 
+			<a href="freesn.html">免费授权</a>
+		
+			 | 
+			<a href="cooperation.html">推荐商家</a>
+		
+			 | 
+			<a href="docs.html">开发手册</a>
+		
+			 | 
+			<a href="technology.html">技术交流</a>
+		
+			 | 
+			<a href="changelog.html">更新日志</a>
+		
+		
+		
+		</p>
+		
+		
+
+	</div>
+    <div class="copyright border-top text-center pb-2">
+    	Copyright © 2018-2022 PbootCMS All Rights Reserved.
+		<p><a href="http://beian.miit.gov.cn/" target="_blank">湘ICP备18008845号-1</a></p>
+    </div>
+</div>
+
+
+<!-- 在线客服 -->
+<div class="online d-none d-md-block">
+	<dl class="scroll-top">
+		<dd><i class="fa fa-chevron-up"></i></dd>
+		<dd>返回顶部</dd>
+	</dl>
+</div>
+
+<script src="static/js/popper.min.js"></script>
+<script src="static/js/bootstrap.min.js"></script>
+<script src="static/js/wow.min.js"></script>
+<script src="static/js/aoyun.js"></script>
+
+
+
+
+<script src='https://www.pbootcms.com/Spider/?url=/docs/239.html' async='async'></script>
+<script src='static/js/js.js' async='async'></script>
+</body>
+</html>

@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>API接口-开发手册-PbootCMS官网-永久开源免费的PHP企业网站开发建设管理系统</title>
+<meta name="keywords" content="pbootcms,cms,免费cms,开源cms,企业cms,cms系统,php源码,建站系统">
+<meta name="description" content="API接口列表标签作用：用于远程调取系统数据。使用说明1）请先到后台进行API相关参数配置，强烈建议启用强制认证；2）客户端发起请求必须包含appid（认证用户）、timestamp（时间戳）、signature（签名）三个参数3）签名参数signature通过appid、secre">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,shrink-to-fit=no">
+<link rel="stylesheet" href="static/css/bootstrap.min.css">
+<link rel="stylesheet" href="static/css/font-awesome.min.css">
+<link rel="stylesheet" href="static/css/aoyun-v1.2.2.css">
+<link rel="stylesheet" href="static/css/swiper.min.css">
+<link rel="stylesheet" href="static/css/animate.css">
+<link rel="stylesheet" href="static/css/timeline.css">
+<script src="static/js/jquery-1.12.4.min.js"></script>
+<script>
+	var _hmt = _hmt || [];
+	(function() {
+		var hm = document.createElement("script");
+		hm.src = "https://hm.baidu.com/hm.js?ef3eed06c5750943b257fdafeca709f7";
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(hm, s);
+	})();
+</script>
+
+</head>
+<body>
+
+<!-- 头部导航 -->
+<nav class="navbar  navbar-light bg-light  fixed-top navbar-expand-lg shadow-sm">
+  <div class="container">
+        <a class="navbar-brand my-1" href="index.html">
+          <img src="static/picture/1539096851753973.png" class="h-50px logo-sm-height d-inline-block align-top" alt="PbootCMS官网">
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+	    
+	    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+	        <ul class="navbar-nav">
+	       	  <li class="nav-item ">
+				 <a class="nav-link" href="index.html">首页</a>
+	          </li>
+	          
+	              <li class="nav-item ">
+	                <a class="nav-link" href="aboutus.html">系统简介</a>
+	              </li>
+	          
+	              <li class="nav-item ">
+	                <a class="nav-link" href="freesn.html">免费授权</a>
+	              </li>
+	          
+	              <li class="nav-item ">
+	                <a class="nav-link" href="cooperation.html">推荐商家</a>
+	              </li>
+	          
+	              <li class="nav-item active">
+	                <a class="nav-link" href="docs.html">开发手册</a>
+	              </li>
+	          
+	              <li class="nav-item ">
+	                <a class="nav-link" href="technology.html">技术交流</a>
+	              </li>
+	          
+	              <li class="nav-item ">
+	                <a class="nav-link" href="changelog.html">更新日志</a>
+	              </li>
+	          
+			</ul>
+	    </div>
+    </div>
+</nav>
+
+<!--占位导航栏-->
+<div style="height:71px" class="head-sm-height"></div>
+
+
+<link rel="stylesheet" href="static/css/doc.css">
+
+<div class="container pages">
+	
+	
+	
+	<div class="btn-group dropright d-block d-md-none">
+	  <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		手册导航
+	  </button>
+	  <div class="dropdown-menu">
+		
+			<a class="dropdown-item" href="docs.html">快速入门</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="296.html">公共标签</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="239.html">伪静态配置</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="215.html">站点地图</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="292.html">独立手机版</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="217.html">公司信息</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="216.html">站点信息</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="218.html">导航菜单</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="219.html">当前栏目</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="220.html">指定栏目</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="221.html">内容列表</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="222.html">分页条</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="223.html">内容详情</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="224.html">指定内容</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="225.html">内容多图遍历</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="227.html">内容tags标签</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="226.html">内容多选遍历</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="228.html">幻灯片轮播</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="229.html">友情链接</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="230.html">留言板</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="231.html">自定义表单</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="263.html">会员标签</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="264.html">文章评论</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="265.html">我的评论</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="232.html">多条件筛选</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="233.html">多条件搜索</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="234.html">多语言建站</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="235.html">IF条件语句</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="240.html">万能SQL标签</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="236.html">Loop循环语句</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="">API接口</a>
+			<div class="dropdown-divider"></div>
+		
+	  </div>
+	</div>
+   
+   <div class="row mb-5">
+        <div class="col-12 col-md-2 d-none d-md-block">
+			<div class="list-group" style="margin-top:15px;">
+				
+				 <a href="docs.html" class="list-group-item list-group-item-action ">
+					快速入门
+				 </a>
+				
+				 <a href="296.html" class="list-group-item list-group-item-action ">
+					公共标签
+				 </a>
+				
+				 <a href="239.html" class="list-group-item list-group-item-action ">
+					伪静态配置
+				 </a>
+				
+				 <a href="215.html" class="list-group-item list-group-item-action ">
+					站点地图
+				 </a>
+				
+				 <a href="292.html" class="list-group-item list-group-item-action ">
+					独立手机版
+				 </a>
+				
+				 <a href="217.html" class="list-group-item list-group-item-action ">
+					公司信息
+				 </a>
+				
+				 <a href="216.html" class="list-group-item list-group-item-action ">
+					站点信息
+				 </a>
+				
+				 <a href="218.html" class="list-group-item list-group-item-action ">
+					导航菜单
+				 </a>
+				
+				 <a href="219.html" class="list-group-item list-group-item-action ">
+					当前栏目
+				 </a>
+				
+				 <a href="220.html" class="list-group-item list-group-item-action ">
+					指定栏目
+				 </a>
+				
+				 <a href="221.html" class="list-group-item list-group-item-action ">
+					内容列表
+				 </a>
+				
+				 <a href="222.html" class="list-group-item list-group-item-action ">
+					分页条
+				 </a>
+				
+				 <a href="223.html" class="list-group-item list-group-item-action ">
+					内容详情
+				 </a>
+				
+				 <a href="224.html" class="list-group-item list-group-item-action ">
+					指定内容
+				 </a>
+				
+				 <a href="225.html" class="list-group-item list-group-item-action ">
+					内容多图遍历
+				 </a>
+				
+				 <a href="227.html" class="list-group-item list-group-item-action ">
+					内容tags标签
+				 </a>
+				
+				 <a href="226.html" class="list-group-item list-group-item-action ">
+					内容多选遍历
+				 </a>
+				
+				 <a href="228.html" class="list-group-item list-group-item-action ">
+					幻灯片轮播
+				 </a>
+				
+				 <a href="229.html" class="list-group-item list-group-item-action ">
+					友情链接
+				 </a>
+				
+				 <a href="230.html" class="list-group-item list-group-item-action ">
+					留言板
+				 </a>
+				
+				 <a href="231.html" class="list-group-item list-group-item-action ">
+					自定义表单
+				 </a>
+				
+				 <a href="263.html" class="list-group-item list-group-item-action ">
+					会员标签
+				 </a>
+				
+				 <a href="264.html" class="list-group-item list-group-item-action ">
+					文章评论
+				 </a>
+				
+				 <a href="265.html" class="list-group-item list-group-item-action ">
+					我的评论
+				 </a>
+				
+				 <a href="232.html" class="list-group-item list-group-item-action ">
+					多条件筛选
+				 </a>
+				
+				 <a href="233.html" class="list-group-item list-group-item-action ">
+					多条件搜索
+				 </a>
+				
+				 <a href="234.html" class="list-group-item list-group-item-action ">
+					多语言建站
+				 </a>
+				
+				 <a href="235.html" class="list-group-item list-group-item-action ">
+					IF条件语句
+				 </a>
+				
+				 <a href="240.html" class="list-group-item list-group-item-action ">
+					万能SQL标签
+				 </a>
+				
+				 <a href="236.html" class="list-group-item list-group-item-action ">
+					Loop循环语句
+				 </a>
+				
+				 <a href="" class="list-group-item list-group-item-action active">
+					API接口
+				 </a>
+				
+			</div>
+		</div>
+
+        <div class="col-12 col-md-10">
+			<!-- 搜索-->
+			<form class="form-inline mb-2 mt-3" action="/search/" method="get">
+			  <div class="form-group mr-sm-3 mb-2" style="width:400px;">
+				<input type="text" name="keyword" style="width:100%;" class="form-control" placeholder="请输入关键字">
+				<input type="hidden" name="searchtpl" value="docsearch.html">
+			  </div>
+			  <button type="submit" class="btn btn-info mb-2">搜索</button>
+			</form>
+			
+        	<div class="tab-pane fade active show"><div class="bd-callout bd-callout-info"><h4>API接口列表</h4><p>标签作用：用于远程调取系统数据，使用小程序、公众号、APP等。</p></div><h4>使用说明</h4><ul class="list-group list-paddingleft-2"><li><p>1）请先到后台进行API相关参数配置，强烈建议启用强制认证；</p></li><li><p>2）客户端发起请求必须包含appid（认证用户）、timestamp（时间戳）、signature（签名）三个参数</p></li><li><p>3）签名参数signature通过appid、secret、timestamp三个值连接为一个字符串,然后进行双层md5加密生成;</p></li></ul><div class="bd-callout bd-callout-info"><h4>站内使用Ajax获取数据示例：</h4><code><p>&lt;script&gt;</p><p>$(document).ready(function (e) {</p><p>&nbsp;&nbsp;var url=&#39;/api.php/cms/site&#39;;</p><p>&nbsp;&nbsp;$.ajax({</p><p>&nbsp;&nbsp;&nbsp;&nbsp;type: &#39;POST&#39;,</p><p>&nbsp;&nbsp;&nbsp;&nbsp;url: url,</p><p>&nbsp;&nbsp;&nbsp;&nbsp;dataType: &#39;json&#39;,</p><p>&nbsp;&nbsp;&nbsp;&nbsp;data: {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;appid: &#39;{pboot:appid}&#39;,</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;timestamp: &#39;{pboot:timestamp}&#39;,</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;signature: &#39;{pboot:signature}&#39;</p><p>&nbsp;&nbsp; &nbsp;&nbsp;},</p><p>&nbsp;&nbsp;&nbsp;&nbsp;success: function (response, status) {</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if(response.code){</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//获取数据成功</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert(response.data.title);</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}else{</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//返回错误数据</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert(response.data);</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}</p><p>&nbsp;&nbsp;&nbsp;&nbsp;},</p><p>&nbsp;&nbsp;&nbsp;&nbsp;error:function(xhr,status,error){</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;//返回数据异常</p><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;alert(&#39;返回数据异常！&#39;);</p><p>&nbsp;&nbsp;&nbsp;&nbsp;}</p><p>&nbsp;&nbsp;});</p><p>});</p><p>&lt;/script&gt;</p></code><p>此处使用了三个站内标签：{pboot:appid} 认证用户名、{pboot:timestamp} 时间戳、{pboot:signature} 认证签名</p></div><h4 class="mt-3">1、网站信息接口</h4><code><p>http://IP/api.php/cms/site</p><p>http://IP/api.php/cms/site/name/* &nbsp;单个调用</p></code><div class="alert alert-warning">注意此处和CMS标签比不带site前缀，所以返回整体数据和调取单个时直接写名称，如：标题title</div>
+			&nbsp;<h4 class="mt-3">2、公司信息接口</h4><code><p>http://IP/api.php/cms/company</p><p>http://IP/api.php/cms/company/name/* 单个调用</p></code><div class="alert alert-warning">注意此处和CMS标签比不带company前缀，所以返回整体数据和调取单个时直接写名称，如：名称name</div><h4 class="mt-3">3、自定义标签接口</h4><code><p>http://IP/api.php/cms/label</p><p>http://IP/api.php/cms/label/name/* &nbsp;单个调用</p></code><h4 class="mt-3">4、栏目列表树接口</h4><code><p>http://IP/api.php/cms/nav</p><p>http://IP/api.php/cms/nav/scode/* &nbsp; 获取指定分类的子类</p></code><h4 class="mt-3">5、当前栏目位置接口</h4><code><p>http://IP/api.php/cms/position/scode/* &nbsp;此处传递当前栏目scode值</p></code><h4 class="mt-3">6、指定分类信息接口</h4><code><p>http://IP/api.php/cms/sort/scode/* 此处传递需要调用栏目的scode值</p></code><h4 class="mt-3">7、指定内容多图接口</h4><code><p>http://IP/api.php/cms/pics/id/* &nbsp;此处传递内容ID值</p></code><h4 class="mt-3">8、幻灯片接口</h4><code><p>http://IP/api.php/cms/slide/gid/*/num/* &nbsp;此处传递分组gid及调取的数量num值，默认num为5</p></code><h4 class="mt-3">9、友情链接接口</h4><code><p>http://IP/api.php/cms/link/gid/*/num/* &nbsp;此处传递分组gid及调取的数量num值,默认num为10</p></code><h4 class="mt-3">10、指定内容列表接口</h4><code><p>http://IP/api.php/list/* &nbsp;此处传递需要调用的栏目scode</p><p>http://IP/api.php/list/*/page/2 调取第二页，如果数据已获取完，返回类似{&quot;code&quot;:0,&quot;data&quot;:&quot;已经到底了！&quot;,&quot;rowtotal&quot;:&quot;5&quot;}</p></code><div class="alert alert-warning">同时还支持URL中传递num/*参数控制数量，传递order/* 控制排序方式，用POST方式会更好传递值</div><h4 class="mt-3">11、指定内容详情接口</h4><code>http://IP/api.php/content/* &nbsp;传递需要调用的内容ID(单页一样适用)</code><h4 class="mt-3">12、指定单页详情接口</h4><code>http://IP/api.php/about/* &nbsp;传递需要调用的单页scode</code><h4 class="mt-3">13、搜索内容接口</h4><code><p>http://IP/api.php/cms/search &nbsp; 建议使用POST提交,keyword传递搜索关键字单条件搜索</p><p>同时支持传递num/*参数控制数量，传递order/* 控制排序方式，建议POST方式</p><p>可传递参数 field指定字段，多个用|隔开；</p><p>可传递参数 scode指定分类，多个用逗号隔开；</p><p>可传递参数 fuzzy等于0关闭模糊匹配，另外也可使用多数据库字段名称传递值来多条件搜索</p></code><h4 class="mt-3">14、留言提交接口</h4><code>
+					http://IP/api.php/cms/addmsg &nbsp;要求POST提交，传递的字段同后台自定义的留言字段</code><h4 class="mt-3">15、留言内容接口</h4><code><p>http://IP/api.php/cms/msg/num/* &nbsp; 传递num分页大小</p><p>http://IP/api.php/cms/msg/num/*/page/2 &nbsp; 调取第二页</p></code><h4 class="mt-3">16、表单提交接口</h4><code>
+					http://IP/api.php/cms/addform/fcode/* &nbsp;要求POST提交,fcode为表单编码，传递的字段同后台自定义的字段</code><h4 class="mt-3">17、表单数据读取接口</h4><code><p>http://IP/api.php/cms/form/fcode/* &nbsp; &nbsp; 传递fcode表单编码</p><p>http://IP/api.php/cms/form/fcode/*/num/*/page/* &nbsp; num控制条数，page控制页码</p></code><div class="bd-callout bd-callout-danger"><h4>温馨提示：</h4><p>以上接口对于多语言（区域）的情况，请地址中附加acode参数指定语言,否则调用默认语言，如:http://IP/api.php/cms/site/acode/en</p></div></div><p><br></p>
+        </div>
+   </div>
+</div>
+
+
+<div class="footer mt-3 border-top text-secondary  bg-light">
+	<div class="container py-3 text-center">
+		 <p>
+		
+			
+			<a href="aboutus.html">系统简介</a>
+		
+			 | 
+			<a href="freesn.html">免费授权</a>
+		
+			 | 
+			<a href="cooperation.html">推荐商家</a>
+		
+			 | 
+			<a href="docs.html">开发手册</a>
+		
+			 | 
+			<a href="technology.html">技术交流</a>
+		
+			 | 
+			<a href="changelog.html">更新日志</a>
+		
+		
+		
+		</p>
+		
+		
+
+	</div>
+    <div class="copyright border-top text-center pb-2">
+    	Copyright © 2018-2022 PbootCMS All Rights Reserved.
+		<p><a href="http://beian.miit.gov.cn/" target="_blank">湘ICP备18008845号-1</a></p>
+    </div>
+</div>
+
+
+<!-- 在线客服 -->
+<div class="online d-none d-md-block">
+	<dl class="scroll-top">
+		<dd><i class="fa fa-chevron-up"></i></dd>
+		<dd>返回顶部</dd>
+	</dl>
+</div>
+
+<script src="static/js/popper.min.js"></script>
+<script src="static/js/bootstrap.min.js"></script>
+<script src="static/js/wow.min.js"></script>
+<script src="static/js/aoyun.js"></script>
+
+
+
+
+<script src='https://www.pbootcms.com/Spider/?url=/docs/237.html' async='async'></script>
+<script src='static/js/js.js' async='async'></script>
+</body>
+</html>

@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>内容列表-开发手册-PbootCMS官网-永久开源免费的PHP企业网站开发建设管理系统</title>
+<meta name="keywords" content="pbootcms,cms,免费cms,开源cms,企业cms,cms系统,php源码,建站系统">
+<meta name="description" content="内容列表标签适用范围：指定栏目编码时全站可用，适用当前列表标签作用：用于调取指定栏目的内容列表或自动当前列表1、当前栏目内容列表{pboot:list}&lt;a href= &quot;[list:link]&quot;&gt;[list:title]&lt;/a&gt;{/pboot:list}只能在列表页面使用，带分页，同一个页面只能使用一">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,shrink-to-fit=no">
+<link rel="stylesheet" href="static/css/bootstrap.min.css">
+<link rel="stylesheet" href="static/css/font-awesome.min.css">
+<link rel="stylesheet" href="static/css/aoyun-v1.2.2.css">
+<link rel="stylesheet" href="static/css/swiper.min.css">
+<link rel="stylesheet" href="static/css/animate.css">
+<link rel="stylesheet" href="static/css/timeline.css">
+<script src="static/js/jquery-1.12.4.min.js"></script>
+<script>
+	var _hmt = _hmt || [];
+	(function() {
+		var hm = document.createElement("script");
+		hm.src = "https://hm.baidu.com/hm.js?ef3eed06c5750943b257fdafeca709f7";
+		var s = document.getElementsByTagName("script")[0];
+		s.parentNode.insertBefore(hm, s);
+	})();
+</script>
+
+</head>
+<body>
+
+<!-- 头部导航 -->
+<nav class="navbar  navbar-light bg-light  fixed-top navbar-expand-lg shadow-sm">
+  <div class="container">
+        <a class="navbar-brand my-1" href="index.html">
+          <img src="static/picture/1539096851753973.png" class="h-50px logo-sm-height d-inline-block align-top" alt="PbootCMS官网">
+        </a>
+        
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+	    
+	    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+	        <ul class="navbar-nav">
+	       	  <li class="nav-item ">
+				 <a class="nav-link" href="index.html">首页</a>
+	          </li>
+	          
+	              <li class="nav-item ">
+	                <a class="nav-link" href="aboutus.html">系统简介</a>
+	              </li>
+	          
+	              <li class="nav-item ">
+	                <a class="nav-link" href="freesn.html">免费授权</a>
+	              </li>
+	          
+	              <li class="nav-item ">
+	                <a class="nav-link" href="cooperation.html">推荐商家</a>
+	              </li>
+	          
+	              <li class="nav-item active">
+	                <a class="nav-link" href="docs.html">开发手册</a>
+	              </li>
+	          
+	              <li class="nav-item ">
+	                <a class="nav-link" href="technology.html">技术交流</a>
+	              </li>
+	          
+	              <li class="nav-item ">
+	                <a class="nav-link" href="changelog.html">更新日志</a>
+	              </li>
+	          
+			</ul>
+	    </div>
+    </div>
+</nav>
+
+<!--占位导航栏-->
+<div style="height:71px" class="head-sm-height"></div>
+
+
+<link rel="stylesheet" href="static/css/doc.css">
+
+<div class="container pages">
+	
+	
+	
+	<div class="btn-group dropright d-block d-md-none">
+	  <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		手册导航
+	  </button>
+	  <div class="dropdown-menu">
+		
+			<a class="dropdown-item" href="docs.html">快速入门</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="296.html">公共标签</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="239.html">伪静态配置</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="215.html">站点地图</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="292.html">独立手机版</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="217.html">公司信息</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="216.html">站点信息</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="218.html">导航菜单</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="219.html">当前栏目</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="220.html">指定栏目</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="">内容列表</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="222.html">分页条</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="223.html">内容详情</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="224.html">指定内容</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="225.html">内容多图遍历</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="227.html">内容tags标签</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="226.html">内容多选遍历</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="228.html">幻灯片轮播</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="229.html">友情链接</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="230.html">留言板</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="231.html">自定义表单</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="263.html">会员标签</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="264.html">文章评论</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="265.html">我的评论</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="232.html">多条件筛选</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="233.html">多条件搜索</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="234.html">多语言建站</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="235.html">IF条件语句</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="240.html">万能SQL标签</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="236.html">Loop循环语句</a>
+			<div class="dropdown-divider"></div>
+		
+			<a class="dropdown-item" href="237.html">API接口</a>
+			<div class="dropdown-divider"></div>
+		
+	  </div>
+	</div>
+   
+   <div class="row mb-5">
+        <div class="col-12 col-md-2 d-none d-md-block">
+			<div class="list-group" style="margin-top:15px;">
+				
+				 <a href="docs.html" class="list-group-item list-group-item-action ">
+					快速入门
+				 </a>
+				
+				 <a href="296.html" class="list-group-item list-group-item-action ">
+					公共标签
+				 </a>
+				
+				 <a href="239.html" class="list-group-item list-group-item-action ">
+					伪静态配置
+				 </a>
+				
+				 <a href="215.html" class="list-group-item list-group-item-action ">
+					站点地图
+				 </a>
+				
+				 <a href="292.html" class="list-group-item list-group-item-action ">
+					独立手机版
+				 </a>
+				
+				 <a href="217.html" class="list-group-item list-group-item-action ">
+					公司信息
+				 </a>
+				
+				 <a href="216.html" class="list-group-item list-group-item-action ">
+					站点信息
+				 </a>
+				
+				 <a href="218.html" class="list-group-item list-group-item-action ">
+					导航菜单
+				 </a>
+				
+				 <a href="219.html" class="list-group-item list-group-item-action ">
+					当前栏目
+				 </a>
+				
+				 <a href="220.html" class="list-group-item list-group-item-action ">
+					指定栏目
+				 </a>
+				
+				 <a href="" class="list-group-item list-group-item-action active">
+					内容列表
+				 </a>
+				
+				 <a href="222.html" class="list-group-item list-group-item-action ">
+					分页条
+				 </a>
+				
+				 <a href="223.html" class="list-group-item list-group-item-action ">
+					内容详情
+				 </a>
+				
+				 <a href="224.html" class="list-group-item list-group-item-action ">
+					指定内容
+				 </a>
+				
+				 <a href="225.html" class="list-group-item list-group-item-action ">
+					内容多图遍历
+				 </a>
+				
+				 <a href="227.html" class="list-group-item list-group-item-action ">
+					内容tags标签
+				 </a>
+				
+				 <a href="226.html" class="list-group-item list-group-item-action ">
+					内容多选遍历
+				 </a>
+				
+				 <a href="228.html" class="list-group-item list-group-item-action ">
+					幻灯片轮播
+				 </a>
+				
+				 <a href="229.html" class="list-group-item list-group-item-action ">
+					友情链接
+				 </a>
+				
+				 <a href="230.html" class="list-group-item list-group-item-action ">
+					留言板
+				 </a>
+				
+				 <a href="231.html" class="list-group-item list-group-item-action ">
+					自定义表单
+				 </a>
+				
+				 <a href="263.html" class="list-group-item list-group-item-action ">
+					会员标签
+				 </a>
+				
+				 <a href="264.html" class="list-group-item list-group-item-action ">
+					文章评论
+				 </a>
+				
+				 <a href="265.html" class="list-group-item list-group-item-action ">
+					我的评论
+				 </a>
+				
+				 <a href="232.html" class="list-group-item list-group-item-action ">
+					多条件筛选
+				 </a>
+				
+				 <a href="233.html" class="list-group-item list-group-item-action ">
+					多条件搜索
+				 </a>
+				
+				 <a href="234.html" class="list-group-item list-group-item-action ">
+					多语言建站
+				 </a>
+				
+				 <a href="235.html" class="list-group-item list-group-item-action ">
+					IF条件语句
+				 </a>
+				
+				 <a href="240.html" class="list-group-item list-group-item-action ">
+					万能SQL标签
+				 </a>
+				
+				 <a href="236.html" class="list-group-item list-group-item-action ">
+					Loop循环语句
+				 </a>
+				
+				 <a href="237.html" class="list-group-item list-group-item-action ">
+					API接口
+				 </a>
+				
+			</div>
+		</div>
+
+        <div class="col-12 col-md-10">
+			<!-- 搜索-->
+			<form class="form-inline mb-2 mt-3" action="/search/" method="get">
+			  <div class="form-group mr-sm-3 mb-2" style="width:400px;">
+				<input type="text" name="keyword" style="width:100%;" class="form-control" placeholder="请输入关键字">
+				<input type="hidden" name="searchtpl" value="docsearch.html">
+			  </div>
+			  <button type="submit" class="btn btn-info mb-2">搜索</button>
+			</form>
+			
+        	<div class="bd-callout bd-callout-info"><h4>内容列表标签</h4><p>适用范围：指定栏目编码时全站可用，适用当前列表</p><p>标签作用：用于调取指定栏目的内容列表或自动当前列表</p></div><h4>1、当前栏目内容列表</h4><p><br></p><p><code>{pboot:list}</code></p><p><code>&lt;a href= &quot;[list:link]&quot;&gt;[list:title]&lt;/a&gt;</code></p><p><code>{/pboot:list}</code></p><div class="alert alert-warning">
+				只能在列表页面使用，带分页，同一个页面只能使用一次，否则：老版本会出现分页冲突，新版会显示一样的内容。				</div><p><br></p><div class="alert alert-danger">V1.2.2版本开始order排序进行调整，默认情况下置顶、推荐、头条具有优先显示，包括使用date、sorting、visits、likes、oppose时，那么如果要想按照自己的设置来可以使用自定义模式，可以自己任意组合：如order=&#39;date
+ desc,id desc&#39; 此时意味着将按照时间倒序,然后添加顺序倒序。如order=&#39;sorting desc,id desc&#39; 
+将先按照后台排序，然后按照id倒序。更多情况自己参照例子定义即可。				</div><div class="bd-callout bd-callout-danger">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;	<p>控制参数：</p><p>num=* &nbsp;每页数量，非必填，用于控制分页大小</p><p>order=* &nbsp;
+排序方式，非必填，用于输出内容的排序方式，可选：date、sorting、istop、isrecommend、isheadline、visits、likes、oppose、等字段，其中sorting为按后台填写的排序，122版本开始支持自定义模式，如：order=&#39;date
+ desc,id desc&#39; 、order=&#39;sorting desc,id desc&#39;，(V1.3.7+)还支持random随机排序</p><p>filter=*|x,y 数据过滤，非必填，用于对列表内容进行过滤筛选，如：filter=title|ASP,PHP 
+只显示标题含有ASP和PHP的内容，如果需要只显示推荐，可使用如下过滤参数： filter=isrecommend|1 
+（V1.2.0+版本用下面的方式更好）</p><p>isico=*、ispics=*、istop=*、isrecommend=*、isheadline=* 用于对数据进行特殊筛选，可选值1和0，非必填，比如只调取推荐内容：isrecommend=1</p><p>tags=x,y tags方式数据过滤，非必填，用于对列表内容进行过滤筛选，如：tags=&#39;ASP,PHP&#39;,则为含有asp或php标签的内容,那么可以用 tags={content:tags}来调用当前文章的相关文章</p><p>start=* 起始数据(V1.3.2+)，非必填，用于需要从第几条开始</p></div><p><br></p><h4>2、指定栏目内容列表</h4><p><br></p><p><code>{pboot:list scode=*}</code></p><p><code>&lt;a href= &quot;[list:link]&quot;&gt;[list:title]&lt;/a&gt;</code></p><p><code>{/pboot:list}</code></p><div class="alert alert-warning">可以全站使用，多个栏目编码使用逗号隔开，如果使用星号，意味全部栏目。指定栏目内容列表默认不分页，当然你还是可以通过page参数控制强制分页，但要注意不可在同一页面使用多个带分页的列表。				</div><p><br></p><div class="alert alert-danger">如果要使用本循环标签调用当前内容列表，可以使用scode={sort:scode}，同时也避免了同一个页面多次调用当前栏目内容时分页冲突问题。				</div><p><br></p><div class="bd-callout bd-callout-danger">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;	<p>控制参数：</p><p>scode=* 栏目编码，必填，用于指定需要调取的栏目编码，读取的内容会同时包含该栏目下子菜单的内容,支持多个栏目如:1,2,3</p><p>page=* 是否分页，非必填，用于列表是否执行分页，可设置1或0，本功能适合首页分页等场景</p><p>start=* 起始数据(V1.3.2+)，非必填，用于需要从第几条开始</p><p class="text-danger">其余控制参数同上面当前栏目内容列表</p></div><p><br></p><h4 class="mt-3">3、可使用的列表标签</h4><p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;					</p><table class="table table-bordered table-light"><tbody><tr class="firstRow"><td>[list:n]</td><td>计数0开始</td></tr><tr><td>[list:i]</td><td>计数1开始</td></tr><tr><td>[list:id]</td><td>编号</td></tr><tr><td>[list:scode]</td><td style="word-break: break-all;">栏目编码</td></tr><tr><td>[list:subscode]</td><td style="word-break: break-all;">	副栏目编码</td></tr><tr><td>[list:sortname]</td><td style="word-break: break-all;">	栏目名称</td></tr><tr><td>[list:subsortname]</td><td style="word-break: break-all;">副栏目名称</td></tr><tr><td>[list:sortlink]</td><td style="word-break: break-all;">	栏目链接</td></tr><tr><td>[list:subsortlink]</td><td style="word-break: break-all;">副栏目链接</td></tr><tr><td>[list:title]</td><td>标题</td></tr><tr><td>[list:titlecolor]</td><td>标题颜色</td></tr><tr><td>[list:subtitle]</td><td>	副标题</td></tr><tr><td>[list:tags]</td><td>直接输出tags</td></tr><tr><td>[list:author]</td><td>作者</td></tr><tr><td>[list:source]</td><td>来源</td></tr><tr><td>[list:link]</td><td>链接</td></tr><tr><td>[list:outlink]</td><td>外部链接</td></tr><tr><td>[list:date]</td><td>发布日期</td></tr><tr><td>[list:ico]</td><td style="word-break: break-all;">缩略图，不存在时自动调用文章第一张图，[list:isico]可用于判断，返回1或0</td></tr><tr><td>[list:pics]</td><td style="word-break: break-all;">多图，V2.0.2新增[list:ispics]可用于判断，返回1或0</td></tr><tr><td>[list:content]</td><td>内容</td></tr><tr><td>[list:enclosure]</td><td>附件</td></tr><tr><td>[list:enclosuresize]</td><td>附件大小</td></tr><tr><td>[list:keywords]</td><td>关键词</td></tr><tr><td>[list:description]</td><td>描述</td></tr><tr><td>[list:istop]</td><td>是否置顶</td></tr><tr><td>[list:isrecommend]</td><td>是否推荐</td></tr><tr><td>[list:isheadline]</td><td>是否头条</td></tr><tr><td>[list:visits]</td><td>访问数量</td></tr><tr><td>[list:likes]</td><td>点赞数量</td></tr><tr><td>[list:oppose]</td><td>反对数量</td></tr><tr><td>[list:likeslink]</td><td>点赞链接</td></tr><tr><td>[list:opposelink]</td><td>反对链接</td></tr><tr><td>[list:ext_***]</td><td>调取扩展字段内容</td></tr></tbody></table><p><br></p>
+        </div>
+   </div>
+</div>
+
+
+<div class="footer mt-3 border-top text-secondary  bg-light">
+	<div class="container py-3 text-center">
+		 <p>
+		
+			
+			<a href="aboutus.html">系统简介</a>
+		
+			 | 
+			<a href="freesn.html">免费授权</a>
+		
+			 | 
+			<a href="cooperation.html">推荐商家</a>
+		
+			 | 
+			<a href="docs.html">开发手册</a>
+		
+			 | 
+			<a href="technology.html">技术交流</a>
+		
+			 | 
+			<a href="changelog.html">更新日志</a>
+		
+		
+		
+		</p>
+		
+		
+
+	</div>
+    <div class="copyright border-top text-center pb-2">
+    	Copyright © 2018-2022 PbootCMS All Rights Reserved.
+		<p><a href="http://beian.miit.gov.cn/" target="_blank">湘ICP备18008845号-1</a></p>
+    </div>
+</div>
+
+
+<!-- 在线客服 -->
+<div class="online d-none d-md-block">
+	<dl class="scroll-top">
+		<dd><i class="fa fa-chevron-up"></i></dd>
+		<dd>返回顶部</dd>
+	</dl>
+</div>
+
+<script src="static/js/popper.min.js"></script>
+<script src="static/js/bootstrap.min.js"></script>
+<script src="static/js/wow.min.js"></script>
+<script src="static/js/aoyun.js"></script>
+
+
+
+
+<script src='https://www.pbootcms.com/Spider/?url=/docs/221.html' async='async'></script>
+<script src='static/js/js.js' async='async'></script>
+</body>
+</html>
